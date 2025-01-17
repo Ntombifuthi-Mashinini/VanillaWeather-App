@@ -1,9 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla Weather App</title>
-  </head>
-  <body></body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Weather App</h1>
+    <form id="search-form">
+      <input
+        type="text"
+        class="input-field"
+        id="city-input"
+        placeholder="Enter a city"
+        required
+      />
+      <button type="submit" class="btn">Search</button>
+    </form>
+    <div id="weather-container" class="weather-container">
+      <h2 id="city-name" class="city-name"></h2>
+      <img id="weather-icon" class="weather-icon" alt="Weather Icon" />
+      <p id="weather-description" class="weather-description"></p>
+      <p id="temperature" class="temperature"></p>
+      <p id="humidity" class="humidity"></p>
+      <p id="wind-speed" class="wind-speed"></p>
+    </div>
+    <footer>
+      <p>
+        This project was coded by
+        <a href="https://github.com/Ntombifuthi-Mashinini/" target="_blank">Ntombifuthi Mashinini</a>
+        and is
+        <a
+          href="https://github.com/Ntombifuthi-Mashinini/VanillaWeather-App.git"
+          target="_blank"
+        >
+          on GitHub</a
+        >
+        and
+        <a
+          href="https://my-first-shecodes-project.netlify.app/"
+          target="_blank"
+        >
+          hosted on Netlify</a
+        >.
+      </p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
+
