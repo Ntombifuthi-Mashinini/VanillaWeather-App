@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <h1>Weather App</h1>
-    <form id="search-form">
-      <input
-        type="text"
-        class="input-field"
-        id="city-input"
-        placeholder="Enter a city"
-        required
-      />
-      <button type="submit" class="btn">Search</button>
-    </form>
-    <div id="weather-container" class="weather-container">
-      <h2 id="city-name" class="city-name"></h2>
-      <img id="weather-icon" class="weather-icon" alt="Weather Icon" />
-      <p id="weather-description" class="weather-description"></p>
-      <p id="temperature" class="temperature"></p>
-      <p id="humidity" class="humidity"></p>
-      <p id="wind-speed" class="wind-speed"></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Weather App</h1>
+      <form id="search-form">
+        <input
+          type="text"
+          id="city-input"
+          class="input-field"
+          placeholder="Enter a city"
+          required
+        />
+        <button type="submit" class="btn">Search</button>
+      </form>
+      <div id="weather-info" class="weather-container">
+        <!-- Weather results will appear here dynamically -->
+      </div>
     </div>
     <footer>
       <p>
         This project was coded by
-        <a href="https://github.com/Ntombifuthi-Mashinini/" target="_blank">Ntombifuthi Mashinini</a>
+        <a href="https://github.com/Ntombifuthi-Mashinini/" target="_blank"
+          >Ntombifuthi Mashinini</a
+        >
         and is
         <a
           href="https://github.com/Ntombifuthi-Mashinini/VanillaWeather-App.git"
@@ -47,9 +45,7 @@
         >.
       </p>
     </footer>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
-
