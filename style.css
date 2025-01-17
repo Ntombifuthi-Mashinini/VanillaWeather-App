@@ -1,47 +1,138 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #83a4d4, #b6fbff);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 400px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #00509e;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+.input-field {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 80%;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-field:focus {
+  border-color: #00509e;
+  box-shadow: 0 0 5px rgba(0, 80, 158, 0.5);
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #00509e;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #003f7e;
+}
+
 .weather-container {
-  margin-top: 20px;
-  background-color: #ffffff;
-  padding: 15px;
+  margin-top: 15px;
+  padding: 20px;
+  background-color: #e8f1f9;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .city-name {
   font-size: 24px;
   font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .weather-description,
 .temperature,
 .humidity,
 .wind-speed {
-  margin: 5px 0;
   font-size: 18px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.weather-description {
+  font-style: italic;
+  color: #00468b;
 }
 
 .weather-icon {
+  display: block;
   width: 80px;
   height: 80px;
-  margin-top: 10px;
+  margin: 15px auto 0;
 }
 
-.input-field {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  width: 200px;
+footer {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
 }
 
-.btn {
-  padding: 10px 15px;
-  border: none;
-  background-color: #007bff;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
+footer a {
+  color: #00509e;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.btn:hover {
-  background-color: #0056b3;
+footer a:hover {
+  text-decoration: underline;
 }
+
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .input-field {
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+
+
 
