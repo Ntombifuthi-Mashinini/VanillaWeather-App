@@ -1,16 +1,14 @@
-const apiKey = "4bf39f80fc9d48003o92t3a6c3d6d47a"; // SheCodes API key
+const apiKey = "4bf39f80fc9d48003o92t3a6c3d6d47a";
 const form = document.getElementById("search-form");
 const cityInput = document.getElementById("city-input");
 const weatherInfo = document.getElementById("weather-info");
 
-// Event listener for the search form
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const city = cityInput.value.trim();
   if (!city) return;
 
   try {
-    // Axios call to SheCodes Weather API
     const response = await axios.get(
       `https://api.shecodes.io/weather/v1/current`,
       {
@@ -22,18 +20,16 @@ form.addEventListener("submit", async (e) => {
       }
     );
 
-    // Extract data and display it
     displayWeather(response.data);
   } catch (error) {
     alert("City not found. Please try again.");
   }
 });
 
-// Function to display weather information
 function displayWeather(data) {
-  const roundedTemp = Math.round(data.temperature.current); // Rounded temperature
-  const weatherEmoji = getWeatherEmoji(data.condition.icon); // Generate emoji based on icon
-  const windSpeed = Math.round(data.wind.speed); // Rounded wind speed
+  const roundedTemp = Math.round(data.temperature.current);
+  const weatherEmoji = getWeatherEmoji(data.condition.icon);
+  const windSpeed = Math.round(data.wind.speed);
 
   weatherInfo.innerHTML = `
         <h2 class="city-name">${data.city}</h2>
@@ -46,7 +42,6 @@ function displayWeather(data) {
   cityInput.value = ""; // Clear input field
 }
 
-// Function to generate weather emoji based on icon description
 function getWeatherEmoji(icon) {
   if (icon.includes("clear")) return "☀️";
   if (icon.includes("cloudy")) return "☁️";
